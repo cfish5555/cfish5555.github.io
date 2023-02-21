@@ -1,5 +1,7 @@
 h1{color:#336963;}
 .box-one{
+    padding: 5px;
+    text-align: center;
     position:static;
     background-color: #b8e9e4;
     border: 2px groove #336963;
