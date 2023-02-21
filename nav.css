@@ -1,0 +1,10 @@
+ul li{
+display: inline;
+border: 2px groove #336963;;
+width: 150px;
+list-style-type: none;
+padding: 5px 5px 5px;
+border-radius: 5px;
+margin-top: 0;
+margin-left: 10px;
+}
