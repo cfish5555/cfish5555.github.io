@@ -10,3 +10,13 @@ h1{color:#336963;}
     width: 100px;
 }
 
+.box-two{
+    padding: 1em;
+    position:static;
+    background-color: #b8e9e4;
+    margin: auto;
+    width: fit-content;
+}
+ ul{
+    list-style-type: none;
+ }
