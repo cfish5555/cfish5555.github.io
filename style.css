@@ -1,3 +1,8 @@
+*{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+}
+
 .box-one{
     padding: 1px;
     text-align: center;
@@ -6,6 +11,7 @@
     border: 2px groove #336963;
     border-radius: 5px;
     width: 100px;
+    text-decoration: none;
 }
 
 .box-two{
@@ -14,21 +20,19 @@
     background-color: #b8e9e4;
     margin: auto;
     width: fit-content;
+    border: 2px groove #336963;
+    border-radius: 5px;
 }
  ul{
     list-style-type: none;
  }
 
-/* Grid layout in mobile view*/
+/* Grid layout in desktop view*/
 @media screen and (min-width: 760px) {
-    img {
-        max-width: 100%;
-        text-align: left;
-    }
     .grid {
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 20% 1fr;
+    grid-gap: 0px;
+    grid-template-columns: 30% 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
         "item1 item2"
@@ -38,11 +42,13 @@
     }
 .item1 {
     grid-area: item1;
-    padding: 20px 20px 20px 60px
+    padding: 20px 20px 0px 60px
     }
 .item2 {
     grid-area: item2;
-    padding: 60px 20px 0px 20px;
+    padding: 60px 20px 0px 0px;
+    width: 90%;
+    height:fit-content ;
     }
 .item3 {
     grid-area: item3;
@@ -61,7 +67,7 @@
         }
 }
 
-/* Grid layout in desktop view*/
+/* Grid layout in mobile view*/
 @media screen and (max-width: 759px){
     .grid {
         display: grid;
@@ -74,17 +80,19 @@
             "item2"
             "item4"
             "item5";
+            justify-content: center;
+            width: 90%;
            }
 
     .item1 {
         grid-area: item1;
-        justify-self: center;
-        padding-left: 10px;
+        padding: 1em 1em 0px 5em;
+        
       }
        
     .item2{
         grid-area: item2;
-        padding-left: 10px;
+        padding-left: 1em;
        
         }
     .item3 {
@@ -94,11 +102,84 @@
     .item4 {
       grid-area: item4;
       justify-self: center;
-      padding-left: 10px;
+      padding-left: 1em;
     }
     .item5 {
         grid-area: item5;
         justify-self: center;
-        padding-left: 10px;
+        padding-left: 1em;
           }
         }      
+
+.container{
+    margin: 20px 20px 20px 20px;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 80%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "item1-home"
+        "item2-home" 
+        "item3-home";
+    justify-content: center;
+    padding: 10px 10px 10px 10px;
+}        
+
+.item1-home{
+    width: 100%;
+}
+
+.item2-home{
+    width: 100%;
+    float: left;
+}
+
+.item3-home{
+    width: 100%;
+    float: left;
+}
+
+
+@media screen and (max-width: 959px) {
+    .container{
+        width: 100%;
+    }
+    .item1-home{
+        width: 100%;
+    }
+    .item2-home{
+        width: 100%;
+    }
+    .item3-home{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container{
+        width: 100%;
+    }
+        .item1-home{
+            width: 100%;
+        }
+        .item2-home{
+            width: 100%;
+        }
+        .item3-home{
+            width: 100%;
+        }
+}
+@media screen and (max-width: 320px) {
+    .container{
+        width: 290px;
+    }
+    .box-two{
+        padding: 1em;
+        position:static;
+        background-color: #b8e9e4;
+        margin: auto;
+        width: 290px;
+        border: 2px groove #336963;
+        border-radius: 5px;
+}
+}
