@@ -1,6 +1,10 @@
+@font-face {
+    font-family: 'Josefin Sans', sans-serif;
+    src: url(JosefinSans-Italic-VariableFont_wght.ttf)
+}
 *{
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color: black;
 }
 
 .box-one{
@@ -64,6 +68,7 @@
         grid-area: item5;
         justify-self: left;
         padding: 10px 0px 10px 20px;
+        font-family: 'Josefins Sans', sans-serif;
         }
 }
 
@@ -181,5 +186,34 @@
         width: 290px;
         border: 2px groove #336963;
         border-radius: 5px;
+}
+}
+
+/* Print stylesheet*/
+@media print{
+*{
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    font-family:'Times New Roman', Times, serif
+}
+nav{
+    display: none;
+}
+header{
+    margin-bottom: 0px;
+    text-align: center;
+    border: none;
+}
+blockquote{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.item1{
+    width: 50%;
+    height: 50%;   
+}
+@page{ 
+    margin: 1in;
 }
 }
