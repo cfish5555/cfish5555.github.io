@@ -7,7 +7,15 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 color: black;
 }
-
+body,
+html{
+min-height: 100%;
+}
+body{
+    background-image:url(Images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .box-one{
     padding: 1px;
     text-align: center;
@@ -34,7 +42,9 @@ color: black;
  blockquote{
     font-family: 'Modak', cursive;
  }
-
+ footer{
+    margin-left: 1em;
+ }
 /* Grid layout in desktop view*/
 @media screen and (min-width: 760px) {
     .grid {
