@@ -1,7 +1,8 @@
-@font-face {
-    font-family: 'Josefin Sans', sans-serif;
-    src: url(JosefinSans-Italic-VariableFont_wght.ttf)
+@font-face{
+    font-family: 'Modak';
+    src: url("https://fonts.googleapis.com");
 }
+
 *{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 color: black;
@@ -29,6 +30,9 @@ color: black;
 }
  ul{
     list-style-type: none;
+ }
+ blockquote{
+    font-family: 'Modak', cursive;
  }
 
 /* Grid layout in desktop view*/
@@ -207,7 +211,7 @@ header{
     border: none;
 }
 blockquote{
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Modak', cursive;
 }
 .item1{
     width: 50%;
