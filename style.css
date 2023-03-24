@@ -187,6 +187,12 @@ body{
         .item3-home{
             width: 100%;
         }
+        iframe{
+            width: 90%;
+            margin: 10px 0px 10px 0px;
+            padding-bottom: 56.25%;
+            position: relative;
+        }
 }
 @media screen and (max-width: 320px) {
     .container{
@@ -200,6 +206,10 @@ body{
         width: 290px;
         border: 2px groove #336963;
         border-radius: 5px;
+}
+iframe{
+    width: 250px;
+    height: 145px;
 }
 }
 
@@ -230,4 +240,28 @@ blockquote{
 @page{ 
     margin: 1in;
 }
+}
+
+.pic{
+    width: 16px;
+    height: 16px;
+}
+
+.picbig{
+    position:absolute;
+    width: 0px;
+    -webkit-transition: width 0.3s linear 0s;
+    transition: width 0.3s linear 0s; 
+}
+
+.pic:hover + .picbig{
+    width: 50px;
+    height: 50px
+}
+
+iframe{
+    border: #000;
+    border-width: 2px;
+    display: block;
+    margin: auto;
 }
