@@ -5,6 +5,7 @@
         height:5%;
         background-color: #336963;
         margin-top: 0px;
+        padding: 0px;
     }
 #hamburger{
     display: none;
@@ -67,6 +68,7 @@ nav ul>li>ul>li:hover a{
         display:block;
         background-color: #336963;
         margin-top: 0px;
+        padding: 10px;
 }
 
 #hamburger{
