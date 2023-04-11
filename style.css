@@ -49,8 +49,39 @@ figcaption{
  footer{
     margin-left: 1em;
  }
+
+ table{
+    border: 1px solid #336963;
+    margin: 20px;
+ }
+
+ table th{
+    background-color: #336963;
+    color: black;
+    padding: 4px;
+ }
+
+ table td{
+    background-color: #b8e9e4;
+    padding: 1px;
+    border: 1px solid #336963;
+ }
+
+ table tr:nth-child(even) td{
+    background-color: whitesmoke;
+ }
+
+ table tfoot tr td{
+    background-color: #336963;
+    color: black;
+    padding: 10px;
+    text-align: center;
+ }
 /* Grid layout in desktop view*/
 @media screen and (min-width: 760px) {
+    table{
+        width: auto;
+    }
     .grid {
     display: grid;
     grid-gap: 0px;
@@ -156,6 +187,9 @@ figcaption{
 
 /* Grid layout in mobile view*/
 @media screen and (max-width: 759px){
+    table{
+        width: auto;
+    }
     .grid {
         display: grid;
         grid-gap: 1em;
@@ -326,6 +360,9 @@ figcaption{
         }
 }
 @media screen and (max-width: 320px) {
+    table{
+        width: auto;
+    }
     .container{
         width: 290px;
     }
