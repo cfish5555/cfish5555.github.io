@@ -2,7 +2,6 @@
     font-family: 'Modak';
     src: url("https://fonts.googleapis.com");
 }
-
 *{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 color: black;
@@ -15,10 +14,14 @@ body{
     background-image:url(background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 figcaption{
     font-size: small;
+    text-align: center;
 }
 .box-one{
     padding: 1px;
@@ -48,157 +51,244 @@ figcaption{
  }
  footer{
     margin-left: 1em;
- }
-
- table{
+    margin-top: auto;
+    padding-top: 20px;
+ }    
+ table.beta{
     border: 1px solid #336963;
-    margin: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
  }
 
- table th{
+ table.beta th{
     background-color: #336963;
     color: black;
     padding: 4px;
  }
 
- table td{
+ table.beta td{
     background-color: #b8e9e4;
     padding: 1px;
     border: 1px solid #336963;
  }
 
- table tr:nth-child(even) td{
+ table.beta tr:nth-child(even) td{
     background-color: whitesmoke;
  }
 
- table tfoot tr td{
+ table.beta tfoot tr td{
     background-color: #336963;
     color: black;
     padding: 10px;
     text-align: center;
  }
+ table.alpha{
+    border: 1px solid #336963;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 
+ }
+
+ table.alpha th{
+    background-color:#336963 ;
+    padding: 4px;
+ }
+
+ table.alpha td{
+    padding: 1px;
+    border-bottom: #336963 1px solid;
+    background-color: white;
+ }
  .contact-box{
-    margin: 0 auto;
-    width: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 20px;
  }
  input[type=text]{
-    width: 100%;
+    width:80%;
     padding: 5px;
+    margin-bottom: 10px;
  }
- input[type=email]{
-    width: 100%;
+input[type=email]{
+    width: 80%;
     padding: 5px;
- }
- textarea{
-    width: 100%;
+    margin-bottom: 10px;
+}
+textarea{
+    width: 80%;
     padding: 10px;
- }
+}
 /* Grid layout in desktop view*/
 @media screen and (min-width: 760px) {
+    
+    .container{
+        margin: 20px 20px 0px 20px;
+        display: grid;
+        grid-gap: 0px;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "item1-home item1-home item1-home"
+            "item2-home item2-home item3-home"
+            "item4-home item4-home item4-home";
+        justify-content: center;
+        align-items: center;
+    }        
+    
+    .item1-home{
+        width: 90%;
+        grid-area: item1-home;
+        justify-self: center;
+        
+    }
+    .item2-home{
+        width: 90%;
+        grid-area: item2-home;
+        padding: 15px;
+        justify-self: center;
+
+    }
+    
+    .item3-home{
+        width: 100%;
+        height: auto;
+        grid-area: item3-home;
+        justify-self: center;
+    }
+    .item4-home{
+        width: 90%;
+        grid-area: item4-home;
+        justify-self: center;
+    }
     table{
         width: auto;
     }
     .grid {
     display: grid;
-    grid-gap: 0px;
-    grid-template-columns: 30% 1fr;
+    grid-gap: 10px;
     grid-template-rows: auto;
     grid-template-areas: 
-        "item1 item2"
-        "item3 item4"
-        "item5 item5";
-    justify-content: center;
+        "item1 item2 item2 item2"
+        "item3 item3 item3 item3"
+        "item4 item4 item4 item4"
+        "item5 item5 item5 item5";
+    align-items: center;
     }
 .item1 {
     grid-area: item1;
-    padding: 20px 20px 0px 60px
+    margin-left: 2em;
     }
 .item2 {
     grid-area: item2;
-    padding: 60px 20px 0px 0px;
     width: 90%;
-    height:fit-content ;
+    height:fit-content;
     }
 .item3 {
     grid-area: item3;
    justify-self: center;
-   padding-left: 10px;
     }
 .item4 {
     grid-area: item4;
-    justify-self: left;
-    padding-left: 20px;
+    justify-self: center;
     }
     .item5 {
         grid-area: item5;
-        justify-self: left;
-        padding: 10px 0px 10px 20px;
+        justify-self: center;
         font-family: 'Josefins Sans', sans-serif;
+        font-size: large;
         }
 .learngrid{
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 0px;
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: 
-        "learn1 learn1 learn2"
-        "learn3 learn3 learn3"
-        "learn4 learn5 learn6"
-        "learn7 learn7 learn7"
-        "learn8 learn9 learn10"
-        "learn11 learn11 learn12";
+        "learn1 learn1 learn1 learn1 learn2 learn2"
+        "learn3 learn3 learn3 learn3 learn4 learn4"
+        "learn5 learn5 learn5 learn6 learn6 learn6"
+        "learn7 learn7 learn8 learn8 learn8 learn8"
+        "learn9 learn9 learn9 learn10 learn10 learn10"
+        "learn11 learn11 learn11 learn11 learn12 learn12";
     justify-content: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    align-items: center;
 }
 .learn1{
     grid-area: learn1;
     justify-self: center;
+    padding: 20px;
 }
 .learn2{
     grid-area: learn2;
     justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
 }
 .learn3{
     grid-area: learn3;
     justify-self: center;
+    padding: 20px;
 }
 .learn4{
     grid-area: learn4;
     justify-self: center;
+    padding: 20px;
 }
 .learn5{
     grid-area: learn5;
     justify-self: center;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 .learn6{
     grid-area: learn6;
     justify-self: center;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 .learn7{
     grid-area: learn7;
     justify-self: center;
+    padding: 20px;
 }
 .learn8{
     grid-area: learn8;
     justify-self: center;
+    padding: 20px;
 }
 .learn9{
     grid-area: learn9;
     justify-self: center;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 .learn10{
     grid-area: learn10;
     justify-self: center;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 .learn11{
     grid-area: learn11;
     justify-self: center;
+    padding: 20px;
 }
 .learn12{
     grid-area: learn12;
     justify-self: center;
+    padding: 20px;
 }
     }
 
@@ -214,8 +304,8 @@ figcaption{
         grid-template-rows: auto;
         grid-template-areas: 
             "item1"
-            "item3"
             "item2"
+            "item3"
             "item4"
             "item5";
             justify-content: center;
@@ -275,48 +365,7 @@ figcaption{
     .learn4{
         width:100%
     }     
-        }      
-
-.container{
-    margin: 20px 20px 0px 20px;
-    display: grid;
-    grid-gap: 0px;
-    grid-template-columns: 2fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "item1-home item3-home"
-        "item2-home item2-home" 
-        "item4-home item4-home";
-    justify-content: center;
-    padding: 10px 10px 0px 10px;
-}        
-
-.item1-home{
-    width: 100%;
-    grid-area: item1-home;
-    
-}
-
-.item2-home{
-    width: 100%;
-    grid-area: item2-home;
-    margin-left: 20px;
-    justify-content: center;
-}
-
-.item3-home{
-    width: 100%;
-    height: auto;
-    grid-area: item3-home;
-    justify-content: center;
-}
-.item4-home{
-    display: flex;
-    width: 100%;
-    float: left;
-    grid-area: item4-home;
-    justify-content: center;
-}
+        }   
 
 
 @media screen and (max-width: 959px) {
@@ -350,8 +399,8 @@ figcaption{
         grid-template-areas:
         "item1-home"
         "item2-home"
-        "item4-home"
-        "item3-home";
+        "item3-home"
+        "item4-home";
     }
     .item1-home{
         width: 90%;
