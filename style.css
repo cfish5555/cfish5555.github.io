@@ -67,12 +67,17 @@ figcaption{
     background-color: #336963;
     color: black;
     padding: 4px;
+    height: 60px;
+    font-size: 24pt;
+
  }
 
  table.beta td{
     background-color: #b8e9e4;
     padding: 1px;
     border: 1px solid #336963;
+    height: 60px;
+    font-size: 15pt;
  }
 
  table.beta tr:nth-child(even) td{
@@ -105,23 +110,25 @@ figcaption{
     background-color: white;
  }
  .contact-box{
+    margin-top: 20px;
     margin-left: 20%;
     margin-right: 20%;
     padding: 20px;
+    font-size: 20pt;
  }
  input[type=text]{
     width:80%;
-    padding: 5px;
+    padding: 20px;
     margin-bottom: 10px;
  }
 input[type=email]{
     width: 80%;
-    padding: 5px;
+    padding: 20px;
     margin-bottom: 10px;
 }
 textarea{
     width: 80%;
-    padding: 10px;
+    padding: 20px;
 }
 /* Grid layout in desktop view*/
 @media screen and (min-width: 760px) {
